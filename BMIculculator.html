@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BMI Culculator</title>
+	<style type="text/css" media="screen">
+		body
+		{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+			background-image: linear-gradient(120deg, #ff6b6b, #5f27cd);
+			min-height: 100vh;
+		}
+
+		header 
+		{
+			position: relative;
+			top: 0;
+			width: 70%;
+			padding: 100px 15%;
+			color: black;
+			margin-bottom: 60px;
+			text-align: left;
+		}
+
+		header b
+		{
+			position: left;
+			top: 0;
+			color: black;
+			margin-bottom: 200px;
+			text-align: right;
+			margin-left: 100px;
+			display: inline;
+
+		}
+
+		main
+		{
+			position: relative;
+			margin-top: 200px;
+			margin-bottom: 60px;
+			align-content: justify;
+		}
+
+		header span
+		{
+			float: left;
+			text-align: left;
+			margin-top: 0;
+			margin-left: 250px;
+		}
+
+		main div
+		{
+			width: 350px;
+			position: relative;
+			top: 100%;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 20px #ee5253;
+		}
+
+		h2
+		{
+			text-align: center;
+			margin-left: 600;
+		}
+
+		.text 
+		{
+			text-align: left;
+			margin-left: 75px;
+		}
+		#w, #h
+		{
+			color: #222f3e;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 200;
+			outline: none;
+			border: none;
+			background: none;
+			border-bottom: 1px solid #341f97;
+			width: 200px;
+		}
+
+		#w:focus, #:focus
+		{
+			border-bottom: 2px solid #341f97;
+			width: 300px;
+			transition: 0.5s;
+		}
+
+		#results
+		{
+			color: #341f97;
+		}
+
+		#btn
+		{
+			font-family: inherit;
+			margin-top: 10px;
+			border: none;
+			color: #fff;
+			background-image: linear-gradient(120deg, #ff6b6b, #5f27cd);
+			width: 150px;
+			padding: 10px;
+			border-radius: 30px;
+			outline: none;
+			cursor: pointer;
+		}
+
+		#btn:hover
+		{
+			box-shadow: 1px 1px 10px #341f97;
+
+		}
+
+		#info
+		{
+			font-size: 12px;
+			font-family: inherit;
+		}
+
+	</style>
+	<script type="text/javascript">
+		
+		function BMI()
+		{
+			var h = document.getElementById('h').value;
+			var w = document.getElementById('w').value;
+			var bmi = w/(h/100*h/100);
+			var bmio =(bmi.toFixed(2));
+
+			document.getElementById("results").innerHTML="Your BMI is " + bmio;
+		}
+
+	</script>
+</head>
+<body>
+    <header>
+    	<img src="MSU LOGO group assignment.png" height="20%" alt ="MSU logo">
+    		<b>CHARMAINE T GOMBINGO R201794X</b>
+			<hr>
+    </header>
+    <main>
+    	<div>
+		<h2>Online Body Mass Index Calculator</h2>
+		<p class ="text" >Height</p>
+		<input type="text" id ="h" name="">
+		<p class ="text">Weight</p>
+		<input type="text" id ="w"name="">
+		<p id ="results"></p>
+		<button id ="btn" onClick ="BMI()">Culculate</button>
+		<p id ="info">Please enter height [cm] and weight [kg]</p>
+	</div>
+    </main>
+	<footer>
+		
+	</footer>
+</body>
+</html>
